@@ -25,7 +25,7 @@ def is_valid_title(title):
     return bool(title) and len(title.split()) <= 10
 
 def is_valid_priority(priority):
-    return bool(priority) and priority.lower() in ["high", "medium", "low"]
+    return bool(priority) and priority.lower() in ["high", "medium", "low"] 
 
 def is_valid_description(description):
     return bool(description) and re.fullmatch(r'[\s\S]*', description)
