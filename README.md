@@ -8,6 +8,8 @@ Installing the following libraries into your python environment.
 This is done using `pip` install.
   - Flask
   - boto3
+    **Optionally**
+  - python-dotenv -> this is what was used for storing keys. 
 
 
 ### Step 1 - Creating the teams channel to capture requests.
