@@ -43,6 +43,27 @@ This is done using `pip` install.
 
 1.  Naviagate to the AWS IAM Console
 2.  Go to `User Groups` and create a new group with a name relevant to the service TicketGroup etc.
-3.  Add a permission policy to this group named `AmazonSQSFullAccess` or a custom policy that suits the needs as long as it has access to the SQS.
+3.  Add a permission policy to this group named `AmazonSQSFullAccess` or a custom policy that suits the needs as long as it has access to the SQS. - These should be saved in a secure place.
 4.  After creating the group select the group and press `Create user` and assign them to the group.
 5.  On the new users account, on the `Security credentials` tab you want to create `Access keys` - this will create a access key and a secret access key which will be used to access the queues we'll make next.
+6.  Next navigate to the SQS service, and click the `Create Queue` button
+7.  Create 3 Queues for the tickets to be sent into with the default queue settings
+
+### Step 5 - Imlementing Access Keys and Changing Queue Names
+
+1.  You want to add your access keys to the application
+2.  And add your QueueNames
+
+## Deployment
+
+1. Make sure the application is running using the flask command `flask run`
+2. Run the ngrok domain using the command `ngrok http --domain=your-domain-name.ngrok-free.app 5000`
+
+## Process
+
+1. Submit a ticket through MS teams 
+2. If the it hits a validity check, retry with the correct format.
+3. If correct view terminal to check if the request has gone through.
+4. If the submission was successful move over to the releveant SQS queue.
+5. Poll the queue to view the message in the queue.
+
