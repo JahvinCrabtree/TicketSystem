@@ -64,16 +64,16 @@ This is done using `pip` install.
 
 ## Process
 
-3.  Submit a ticket through MS teams
+1.  Submit a ticket through MS teams
 
-![image](https://github.com/JahvinCrabtree/TicketSystem/assets/108539156/eda0d2d7-b6dc-40d5-91e1-ec984e63cba4)
+![image](https://github.com/JahvinCrabtree/TicketSystem/assets/108539156/a8575017-efc4-43cf-9454-72d2b54d0d86)
 
-4.  If the it hits a validity check, retry with the correct format.
-5.  If correct view terminal to check if the request has gone through.
+2.  If the it hits a validity check, retry with the correct format.
+3.  If correct view terminal to check if the request has gone through.
 
 ![image](https://github.com/JahvinCrabtree/TicketSystem/assets/108539156/0c02790e-1bd1-4b50-9d0b-a8ae3c38660c)
 
-6.  If the submission was successful move over to the releveant SQS queue.
-7.  Press the `Send and receeive message` button
-8.  Press the `Poll for messages` button to poll the queue to view the message in the queue.
+4.  If the submission was successful move over to the releveant SQS queue.
+5.  Press the `Send and receeive message` button
+6.  Press the `Poll for messages` button to poll the queue to view the message in the queue.
 
